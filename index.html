@@ -2,23 +2,184 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/adbb05ac4a.js" crossorigin="anonymous"></script>
     <title>James McNicholas</title>
   </head>
+
   <body>
-
-    <canvas id="bg"></canvas>
+    <!-- <iframe src="http://dx-ball.ru/iframe.html#11" width="640" height="480" frameborder="0"></iframe><p>Приложение разработано веб-студией <a target="_blank" href="http://borodinart.ru/" title="Перейти на сайт разработчиков игры">BorodinART</a> в 2012 году.</p> -->
     <main>
-      <div class="title">
-        <h1>James McNicholas
-          <a href="https://www.linkedin.com/in/james-mcnicholas-14363a158/"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="https://github.com/jamesmcnicholas"><i class="fa-brands fa-github-square"></i></a></h1>
-       </div>
-       
-    </main>
+      <div class="item">
+        <div class="title">
 
+          <h1>
+            <i class="fa-brands fa-java"></i>
+            <i class="fa-brands fa-angular"></i>
+            <i class="fa-brands fa-python"></i>
+            James McNicholas
+            <a href="https://www.linkedin.com/in/james-mcnicholas-14363a158/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/jamesmcnicholas"><i class="fa-brands fa-github-square"></i></a>
+
+          
+          </h1>
+            
+        </div>
+      </div>
+      
+      <div class="projects">
+        <div class="item">
+          <div class="project">
+            <span class="box">
+              <a href="https://github.com/jamesmcnicholas/audiosplit"><h2>$Audiosplit</h2></a>
+            </span>
+            <div class="description">
+              <p>Keystrokes with your voice</p>
+              I ran out of fingers - so I decided i'd use my voice...
+              This project starts with an obscure game from my childhood called Globy. 
+              Once a year or so I find myself scouring the wayback machine for the download link so I can replay it.
+              This time however, I was thinking about how long it took me to beat as a kid with my dad - it was evening entertainment for weeks.
+              But now that I know my way around a mouse and keyboard, the game is a bit easier - but how much easier exactly?
+              Could i beat it in one sitting? I did. Then i found someone speedrunning the game - 1 hour and 42 minutes. I could beat that.
+              Several days later and my housemate and I had the time down to 34 minutes.
+              But speedrunning involves multitasking, hitting buttons to mark "splits" when you finish a section.
+              Whilst i'm better than 12 year old me at games, my multitasking skills are still lacking. So I decided to employ voice recognition to help out.
+              This could of course all be run locally, but my dusty old pi B+ was giving me the puppy dog eyes
+            </div>
+            <div class="demo" id="wglpane"><img src="livesplit.png" class="demoImg"></div>
+          </div>
+        </div>
+
+
+        <div class="item">
+          <div class="project">
+            <span class="box">
+              <h2>>$OneWeb</h2>
+            </span>
+            <div class="description">
+              <p>OneWeb Satellite Megaconstellation</p>
+              I worked as a consultant on several aspects of OneWeb's system.
+              <ul>
+                <li>Designed and oversaw several automated test suites</li>
+                <li>Agile C# & Python Development following best practices</li>
+                <li>Live system and incident support to meet SLAs</li>
+                <li>Frequent client exposure to ensure a high standard of delivery</li>
+              </ul>
+            </div>
+            <div class="demo" id="wglpane"><canvas id="bg"/></div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="project">
+            <span class="box">
+              <a href="https://github.com/jamesmcnicholas/career-tracker"><h2>$Career Tracker</h2></a>
+            </span>
+            <div class="description">
+              <p>MEAN Stack Dissertation Project</p>
+              I undertook research and development of a modern web application for tracking career development.
+              The goal was to provide a clean, fast, and elegant soltuon for members at CGI to monitor their career progression.
+              The result was an application developed using Angular, MongoDB, Express and NodeJS (MEAN Stack), alongside Keycloak for authentication and Docker for containerisation.
+            </div>
+            <div class="demo"><img src="career-tracker.gif" class="demoImg"></div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="project">
+            <span class="box">
+              <h2>>$FarmMade</h2>
+            </span>
+            <div class="description">
+              <p>LibGDX/Java Game From Scratch</p>
+              I grew up learning Java, and playing games. I'd tried using unity and other engines to build games before, but it never felt quite right.
+              When I discovered LibGDX as a framework for building games in Java from scratch, its safe to say I was intriged.
+              This project is still in active development, but you can play the latest build below, right from your browser!
+            </div>
+            <div class="demo"><iframe src="https://james.servegame.com" width="1000" height="580" frameborder="0"></iframe></div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="project">
+            <span class="box">
+              <h2>>$Defrag Gallery</h2>
+            </span>
+            <div class="description">
+              <p>Tinder for your photo bin!</p>
+              I had an idea for a fun way sort through masses of excess photos by utilising Tinder's famous swipe mechanic.
+              I threw together this quick prototype in JavaFX one evening, before actually doing some research and realising I wasn't quite first to the punch.
+              It was a nice small project to get my hands grubby, but also a lesson in doing some market research before jumping the gun on project development.
+            </div>
+            <div class="demo"><img src="defrag-gallery.gif" class="demoImg"></div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="project">
+            <span class="box">
+              <h2>>$Poor Man's Spotify</h2>
+            </span>
+            <div class="description">
+              <p>I'm pretty frugal...</p>
+              Paying for subscription services has always tickled my wallet the wrong way, but exploring music is pretty important as a teenager.
+              Long before Google shut down Google Play Music, you could upload your own MP3s and have their service sync them out to your devices.
+              This gave me an idea - use youtube-dl to grab music from youtube, scrape its metadata for cover art and details, then upload to GPM.
+              Using Gitub's student pack, I fired up a vm on Digital Ocean's cloud platform and wrote a quick landing page to grab a youtube URL.
+              Then, I did some hunting and found the <a href="https://github.com/simon-weber/gmusicapi">unnoficial Google Music API</a>. 
+              One quick python script later and it was good to go - any song I wanted on all my devices. Eventually however, I did begrudgingly make the switch to spotify.
+            </div>
+            <div class="demo"><img src="poor man's spotify.png" class="demoImg"></div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="project">
+            <span class="box">
+              <h2>>$SimplePlayer</h2>
+            </span>
+            <div class="description">
+              <p>A Level Computer Science Project</p>
+              Way back in 2017, this was my greatest project yet. 
+              Building on all of my Java and JavaFX knowledge, I designed and developed a music player application from scratch.
+              It features all the essentials - songs, playlists, persistence and scrubbing whilst maintaining a lightweight footprint.
+              However, I've come a long way since then, and despite its relevance to my journey, it really could benefit from some improvements.
+            </div>
+            <div class="demo">
+              <iframe  width= 1280 height=720 src="https://www.youtube-nocookie.com/embed/ZmSSK5zJN6w?rel=0&amp;showinfo=0" frameborder="0"  allow="autoplay" allowfullscreen="true" class="demoImg"></iframe></div>
+          </div>
+        </div>
+        
+
+        <div class="item">
+          <div class="project">
+            <span class="box">
+              <h2>>$Hours of Tunes</h2>
+            </span>
+            <div class="description">
+              <p>Visualising copyrighted music for views</p>
+              Okay, so this one's not the most ethical of my projects - but in my defence, I was 16.
+              Not really a software project, but following in the footsteps of a friend who uploaded a 10 hour long version of Hozier's Take Me To Church to youtube.
+              Seeing its success (Over a million views), I thought I could whack some after effects visualisers on some music and rake in some internet fame.
+              To my shock, it worked... to an extent. The views began to rack up, but the subscribers dwindled - as did the revenue due to the copyrighted music.
+              Still, its cool to lay claim to a channel that's accumulated over 800 thousand views, and over 21 years of total watch time. 
+            
+              I think the revenue speaks for itself! /s
+              
+              Don't worry - all the videos were swiftly copyright claimed so the revenue went to whichever megalabel owns the rights.
+            </div>
+            <div class="demo">
+              <iframe  width= 1280 height=720 src="https://www.youtube-nocookie.com/embed/OhkwUqsfC2w?rel=0&amp;showinfo=0" frameborder="0"  allow="autoplay" allowfullscreen="true" class="demoImg"></iframe></div>
+              <img src="allthehours.png" class="demoImg">
+          </div>
+        </div>
+    </div>    
+      </main>
+
+
+
+    <p height="100px"></p>
     <script type="module" src="/main.js"></script>
     
   </body>
