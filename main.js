@@ -64,10 +64,19 @@ function animate(time){
   var width = document.getElementById('wglpane').offsetWidth;
   renderer.setSize(width ,width/2);
   camera.updateProjectionMatrix();
+  document.getElementById('header').width = width;
   sats.forEach(s => orbitStars(time, s.key, 0, 0, 0, s.value, 0.0005));
 
   // Finally, Render
   renderer.render(scene, camera);
+}
+
+function toggleDark() {
+  const projects = document.getElementsByClassName("project");
+  projects.forEach(element => {
+    element.classList.toggle("dark-mode");  
+  });
+  
 }
 
 // Generate Stars
