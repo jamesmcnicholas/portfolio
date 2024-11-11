@@ -6,18 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/adbb05ac4a.js" crossorigin="anonymous"></script>
     <title>James McNicholas</title>
+    <!-- Add Lightbox2 CSS and JS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    
     <script type="module" crossorigin src="https://jamesmcnicholas.co.uk/assets/index.afeffa40.js"></script>
     <link rel="modulepreload" href="https://jamesmcnicholas.co.uk/assets/vendor.abfa9f12.js">
-    <link rel="stylesheet" href="https://jamesmcnicholas.co.uk/assets/index.6104bb00.css">
+    <link rel="stylesheet" href="https://jamesmcnicholas.co.uk/assets/index.e2a7259a.css">
   </head>
 
   <script>
     function toggleDark() {
-      const projects = document.getElementsByClassName("project");
+      const projects = document.getElementsByClassName("project-item");
       for (let element of projects) {
         element.classList.toggle("dark-mode");  
       }
-      const headers = document.getElementsByTagName("h2");
+      const headers = document.getElementsByTagName("demoImg");
       for (let element of headers) {
         element.classList.toggle("dark-mode");  
       }
@@ -25,13 +29,15 @@
       var toggleButton = document.getElementById("toggleButton")
       toggleButton.classList.toggle("fa-moon")
       toggleButton.classList.toggle("fa-sun")
+
+      const body = document.body;
+  body.classList.toggle("dark-mode");  // Toggle dark mode on body
     }
   </script>
 
   <body>
-    <!-- <iframe src="http://dx-ball.ru/iframe.html#11" width="640" height="480" frameborder="0"></iframe><p>Приложение разработано веб-студией <a target="_blank" href="http://borodinart.ru/" title="Перейти на сайт разработчиков игры">BorodinART</a> в 2012 году.</p> -->
     <main>
-      <div class="item">
+      <div class="header-border">
         <div class="title">
 
           <h1 id="header">
@@ -39,26 +45,121 @@
             <i class="fa-brands fa-angular"></i>
             <i class="fa-brands fa-python"></i>
             James McNicholas
-            <a href="https://www.linkedin.com/in/james-mcnicholas-14363a158/"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/jamesmcnicholas"><i class="fa-brands fa-github-square"></i></a>
+            <a href="https://www.linkedin.com/in/james-mcnicholas-14363a158/" class="icon-header"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/jamesmcnicholas" class="icon-header"><i class="fa-brands fa-github-square"></i></a>
 
             <i id="toggleButton" class="fa-solid fa-moon" onClick="toggleDark()"></i>
-          
           </h1>
-            
         </div>
       </div>
       
+      <div class="content-wrapper">
       <div class="projects">
-        <div class="item">
-          <div class="project">
-            <span class="box">
-              <a href="https://github.com/jamesmcnicholas/audiosplit"><h2>$Audiosplit</h2></a>
-            </span>
-            <div class="description">
-              <p>Keystrokes with your voice</p>
-              I ran out of fingers - so I decided i'd use my voice...
-              This project starts with an obscure game from my childhood called Globy. 
+
+        <div class="project-item">
+          <div class="project-content">
+            <div class="project-title">Pygame Tetris</div>
+            <img src="tetris.gif" class="demoImg" onclick="openModal('tetris.gif', 'tetris')" alt="Tetris Project">
+            <p class="project-tagline">Teaching python with tetrominoes!</p>
+          </div>
+        </div>
+
+
+        <div class="project-item">
+          <div class="project-content">
+            <div class="project-title">Audiosplit</div>
+            <img src="https://jamesmcnicholas.co.uk/assets/livesplit.bac9c64a.png" class="demoImg" onclick="openModal('livesplit.png', 'audiosplit')" alt="Audiosplit Project">
+            
+            <p class="project-tagline">Hands-free keystrokes with your voice</p>
+          </div>
+        </div>
+
+         <div class="project-item">
+         <div class="project-content">
+            <div class="project-title">OneWeb</div>
+            <!-- <canvas id="bg"/></div> -->
+            <div id="wglpane" class="demoImg" onclick="openModal('livesplit.png', 'oneweb')" alt="Oneweb Project"><canvas id="bg"/></div>
+              <p class="project-tagline">OneWeb Satellite Megaconstellation</p>
+            </div>
+        </div>
+        
+        <div class="project-item">
+          <div class="project-content">
+             <div class="project-title">Career Tracker</div>
+            <img src="https://jamesmcnicholas.co.uk/assets/career-tracker.2f9f2f5a.gif" class="demoImg" onclick="openModal('career-tracker.gif', 'careertracker')" alt="Career Tracker Project">
+            <p class="project-tagline">MEAN stack career developement site</p>
+          </div>
+        </div>
+        
+        
+        <div class="project-item">
+          <div class="project-content">
+             <div class="project-title">Farmmade</div>
+             <img src="farm.gif" class="demoImg" onclick="openModal('farm.gif', 'farmmade')" alt="LibGDX Project">
+            <!-- <iframe class="demoImg" src="https://james.servegame.com" width= 100% frameborder="0" onclick="openModal('career-tracker.gif', 'careertracker')"/> -->
+            <p class="project-tagline">LibGDX/Java Game From Scratch</p>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-content">
+            <div class="project-title">Defrag Gallery</div>
+            <img src="https://jamesmcnicholas.co.uk/assets/defrag-gallery.acca5de0.gif" class="demoImg" onclick="openModal('defrag-gallery.gif', 'defrag')" alt="Photo Project">
+            <p class="project-tagline">Tinder swiping for your photo bin!</p>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-content">
+            <div class="project-title">Poor Man's Spotify</div>
+            <img src="https://jamesmcnicholas.co.uk/assets/poor man's spotify.48fc8f5f.png" class="demoImg" onclick="openModal('poor man\'s spotify.png', 'spotify')" alt="Spotify Project">
+            <p class="project-tagline">I was pretty frugal...</p>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-content">
+            <div class="project-title">SimplePlayer</div>
+            <iframe class="demoImg" src="https://www.youtube-nocookie.com/embed/ZmSSK5zJN6w?rel=0&amp;showinfo=0" frameborder="0"  allow="autoplay" allowfullscreen="true" onclick="openModal('career-tracker.gif', 'simpleplayer')"></iframe>
+            <p class="project-tagline">A-Level Compsci project</p>
+          </div>
+        </div>
+        
+
+        <div class="project-item">
+          <div class="project-content">
+            <div class="project-title">Hours of Tunes</div>
+              <iframe class="demoImg" src="https://www.youtube-nocookie.com/embed/OhkwUqsfC2w?rel=0&amp;showinfo=0" frameborder="0"  allow="autoplay" allowfullscreen="true" onclick="openModal('career-tracker.gif', 'hoursoftunes')"></iframe>
+          <p class="project-tagline">Visualising music for views</p>
+        </div> 
+    </div>    
+  </div>
+  </div>
+      </main>
+
+
+
+    <p height="100px"></p>
+
+    <div id="projectModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <img id="modalImage" class="modal-img" src="" alt="">
+        <div id="modalText" class="modal-text"></div>
+      </div>
+    </div>
+
+
+    
+    
+
+    
+  </body>
+
+  <script>
+      const projectDescriptions = {
+    "audiosplit": `I ran out of fingers - so I decided I’d use my voice...
+              This project starts with an obscure game from my childhood called Globy.
               Once a year or so I find myself scouring the wayback machine for the download link so I can replay it.
               This time however, I was thinking about how long it took me to beat as a kid with my dad - it was evening entertainment for weeks.
               But now that I know my way around a mouse and keyboard, the game is a bit easier - but how much easier exactly?
@@ -66,121 +167,40 @@
               Several days later and my housemate and I had the time down to 34 minutes.
               But speedrunning involves multitasking, hitting buttons to mark "splits" when you finish a section.
               Whilst i'm better than 12 year old me at games, my multitasking skills are still lacking. So I decided to employ voice recognition to help out.
-              This could of course all be run locally, but my dusty old pi B+ was giving me the puppy dog eyes
-            </div>
-            <div class="demo" id="wglpane"><img src="livesplit.png" class="demoImg"></div>
-          </div>
-        </div>
+              This could of course all be run locally, but my dusty old pi B+ was giving me the puppy dog eyes`,
 
+    "oneweb": `I worked as a consultant on several aspects of OneWeb's system.\n
+                -> Designed and oversaw several automated test suites\n
+                -> Agile C# & Python Development following best practices\n
+                -> Live system and incident support to meet SLAs\n
+                -> Frequent client exposure to ensure a high standard of delivery\n`,
 
-        <div class="item">
-          <div class="project">
-            <span class="box">
-              <h2>>$OneWeb</h2>
-            </span>
-            <div class="description">
-              <p>OneWeb Satellite Megaconstellation</p>
-              I worked as a consultant on several aspects of OneWeb's system.
-              <ul>
-                <li>Designed and oversaw several automated test suites</li>
-                <li>Agile C# & Python Development following best practices</li>
-                <li>Live system and incident support to meet SLAs</li>
-                <li>Frequent client exposure to ensure a high standard of delivery</li>
-              </ul>
-            </div>
-            <div class="demo" id="wglpane"><canvas id="bg"/></div>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="project">
-            <span class="box">
-              <a href="https://github.com/jamesmcnicholas/career-tracker"><h2>$Career Tracker</h2></a>
-            </span>
-            <div class="description">
-              <p>MEAN Stack Dissertation Project</p>
-              I undertook research and development of a modern web application for tracking career development.
+    "careertracker": `I undertook research and development of a modern web application for tracking career development.
               The goal was to provide a clean, fast, and elegant soltuon for members at CGI to monitor their career progression.
-              The result was an application developed using Angular, MongoDB, Express and NodeJS (MEAN Stack), alongside Keycloak for authentication and Docker for containerisation.
-            </div>
-            <div class="demo"><img src="career-tracker.gif" class="demoImg"></div>
-          </div>
-        </div>
+              The result was an application developed using Angular, MongoDB, Express and NodeJS (MEAN Stack), alongside Keycloak
+               for authentication and Docker for containerisation.`,
 
-        <div class="item">
-          <div class="project">
-            <span class="box">
-              <h2>>$FarmMade</h2>
-            </span>
-            <div class="description">
-              <p>LibGDX/Java Game From Scratch</p>
-              I grew up learning Java, and playing games. I'd tried using unity and other engines to build games before, but it never felt quite right.
+    "farmmade": `I grew up learning Java, and playing games. I'd tried using unity and other engines to build games before, but it never felt quite right.
               When I discovered LibGDX as a framework for building games in Java from scratch, its safe to say I was intriged.
-              This project is still in active development, but you can play the latest build below, right from your browser!
-            </div>
-            <div class="demo"><iframe src="https://james.servegame.com" width= 100% height=580px frameborder="0"></iframe></div>
-          </div>
-        </div>
+              This project is still in development, but you can play the latest build, right from your browser!`,
 
-        <div class="item">
-          <div class="project">
-            <span class="box">
-              <h2>>$Defrag Gallery</h2>
-            </span>
-            <div class="description">
-              <p>Tinder for your photo bin!</p>
-              I had an idea for a fun way sort through masses of excess photos by utilising Tinder's famous swipe mechanic.
+    "defrag": `I had an idea for a fun way sort through masses of excess photos by utilising Tinder's famous swipe mechanic.
               I threw together this quick prototype in JavaFX one evening, before actually doing some research and realising I wasn't quite first to the punch.
-              It was a nice small project to get my hands grubby, but also a lesson in doing some market research before jumping the gun on project development.
-            </div>
-            <div class="demo"><img src="defrag-gallery.gif" class="demoImg"></div>
-          </div>
-        </div>
+              It was a nice small project to get my hands grubby, but also a lesson in doing some market research before jumping the gun on project development.`,
 
-        <div class="item">
-          <div class="project">
-            <span class="box">
-              <h2>>$Poor Man's Spotify</h2>
-            </span>
-            <div class="description">
-              <p>I'm pretty frugal...</p>
-              Paying for subscription services has always tickled my wallet the wrong way, but exploring music is pretty important as a teenager.
+    "spotify": `Paying for subscription services has always tickled my wallet the wrong way, but exploring music is pretty important as a teenager.
               Long before Google shut down Google Play Music, you could upload your own MP3s and have their service sync them out to your devices.
               This gave me an idea - use youtube-dl to grab music from youtube, scrape its metadata for cover art and details, then upload to GPM.
               Using Gitub's student pack, I fired up a vm on Digital Ocean's cloud platform and wrote a quick landing page to grab a youtube URL.
               Then, I did some hunting and found the <a href="https://github.com/simon-weber/gmusicapi">unnoficial Google Music API</a>. 
-              One quick python script later and it was good to go - any song I wanted on all my devices. Eventually however, I did begrudgingly make the switch to spotify.
-            </div>
-            <div class="demo"><img src="poor man's spotify.png" class="demoImg"></div>
-          </div>
-        </div>
+              One quick python script later and it was good to go - any song I wanted on all my devices. Eventually however, I did begrudgingly make the switch to spotify.`,
 
-        <div class="item">
-          <div class="project">
-            <span class="box">
-              <h2>>$SimplePlayer</h2>
-            </span>
-            <div class="description">
-              <p>A Level Computer Science Project</p>
-              Way back in 2017, this was my greatest project yet. 
+    "simpleplayer": `Way back in 2017, this was my magnum opus (which isn't saying much, i was 17). 
               Building on all of my Java and JavaFX knowledge, I designed and developed a music player application from scratch.
               It features all the essentials - songs, playlists, persistence and scrubbing whilst maintaining a lightweight footprint.
-              However, I've come a long way since then, and despite its relevance to my journey, it really could benefit from some improvements.
-            </div>
-            <div class="demo">
-              <iframe  width=100% height=480px src="https://www.youtube-nocookie.com/embed/ZmSSK5zJN6w?rel=0&amp;showinfo=0" frameborder="0"  allow="autoplay" allowfullscreen="true" class="demoImg"></iframe></div>
-          </div>
-        </div>
-        
+              However, I've come a long way since then, and despite its relevance to my journey, it really could benefit from some improvements.`,
 
-        <div class="item">
-          <div class="project">
-            <span class="box">
-              <h2>>$Hours of Tunes</h2>
-            </span>
-            <div class="description">
-              <p>Visualising copyrighted music for views</p>
-              Okay, so this one's not the most ethical of my projects - but in my defence, I was 16.
+    "hoursoftunes": `Okay, so this one's not the most ethical of my projects - but in my defence, I was 16.
               Not really a software project, but following in the footsteps of a friend who uploaded a 10 hour long version of Hozier's Take Me To Church to youtube.
               Seeing its success (Over a million views), I thought I could whack some after effects visualisers on some music and rake in some internet fame.
               To my shock, it worked... to an extent. The views began to rack up, but the subscribers dwindled - as did the revenue due to the copyrighted music.
@@ -188,20 +208,36 @@
             
               I think the revenue speaks for itself! /s
               
-              Don't worry - all the videos were swiftly copyright claimed so the revenue went to whichever megalabel owns the rights.
-            </div>
-            <div class="demo">
-              <iframe  width=100% height=480px src="https://www.youtube-nocookie.com/embed/OhkwUqsfC2w?rel=0&amp;showinfo=0" frameborder="0"  allow="autoplay" allowfullscreen="true" class="demoImg"></iframe></div>
-              <img src="allthehours.png" class="demoImg">
-          </div>
-        </div>
-    </div>    
-      </main>
+              Don't worry - all the videos were swiftly copyright claimed so the revenue went to whichever megalabel owns the rights.`,
+
+    "tetris": `What's more classic than Tetris? That's how I convinced my housemate with a maths degree to start learning python. We started from scratch,
+     learning about pygame and python together as I showed him the ropes and handled the art and music. He quickly found himself smashing out each hurdle, 
+     and it wasn't long before we had a functional prototype. I later went back and jazzed things up with some proper OOP and local \& online multiplayer.
+     Next up, i've been using this in combination with my rusty electronics knowledge to cook up an IRL version on an LED matrix. Pics to follow.`
 
 
+    // Add other projects here if needed
+  };
 
-    <p height="100px"></p>
-    
-    
-  </body>
+
+  function openModal(imageSrc, projectId) {
+    // Use projectId to fetch the description from the projectDescriptions object
+    const description = projectDescriptions[projectId];
+    document.getElementById('modalImage').src = imageSrc;
+    document.getElementById('modalText').innerHTML = description;
+    document.getElementById('projectModal').style.display = 'block';
+  }
+
+  document.querySelector('.close').onclick = function() {
+    document.getElementById('projectModal').style.display = 'none';
+  }
+
+  window.onclick = function(event) {
+    const modal = document.getElementById('projectModal');
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    }
+  }
+  </script>
+
 </html>
